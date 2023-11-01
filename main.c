@@ -2,7 +2,9 @@
 
 int main(int argc,char* argv[]){
 
-	//something will be here trust me
+	//checked for file name
+	printf("%s\n",argv[1]);
+	
 
 	return 0;
 }
