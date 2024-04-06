@@ -1,33 +1,27 @@
 #ifndef STACK_H
 #define STACK_H
-#include<stdbool.h>
+
+typedef char Data;
 
 typedef struct node{
+	Data data;
 	struct node *next;
-	int temp;
-}NODE;
+}Node,*NodePtr;
 
 typedef struct stack{
-	struct Node *top;
-	int size;
-}STACK;
+	NodePtr Top;
+}Stack,*StackPtr;
 
+StackPtr initStack (void);
 
+void push(StackPtr mainStack,char insert); 
 
+char pop(StackPtr mainStack); 
 
-void push(void);
-//insert stack element
+char peek(StackPtr mainStack);
 
-void pop(void);
-//remove element
+int isEmpty(StackPtr mainStack);
 
-void top(void);
-//returns top of stack
+void empty(StackPtr mainStack);
 
-bool isEmpty(void);
-//returns true if stack is empty
-
-void size(void);
-//returns stack size
-
-#endif
+StackPtr destroyStack(StackPtr mainStack);
