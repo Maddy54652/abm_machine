@@ -4,29 +4,17 @@
 
 int main(int argc,char* argv[]){
 
-	//testing the stack functions
+	StackPtr core_1;
+	StackPtr core_2;
+	core_1 = initStack();
+	core_2 = initStack();
+	empty(core_1);
+	empty(core_2);
 	
-	StackPtr Test_Stack;
-	int i;
-	Test_Stack = initStack();
-	isEmpty(Test_Stack);
-	push(Test_Stack,'a');
-	push(Test_Stack,'#');
-	push(Test_Stack,'|');
-	push(Test_Stack,'R');
-	isEmpty(Test_Stack);
-	peek(Test_Stack);
-	for(i = 0;i<4;i++)
-	{
-		peek(Test_Stack);
-		pop(Test_Stack);
-	}
-	isEmpty(Test_Stack);
-	push(Test_Stack,'$');
-	push(Test_Stack,67);
-	empty(Test_Stack);
-	isEmpty(Test_Stack);
-	destroyStack(Test_Stack);
+	isEmpty(core_1);
+	isEmpty(core_2);
+	destroyStack(core_1);
+	destroyStack(core_2);
 
 	printf("It work.\n");
 	return 0;
